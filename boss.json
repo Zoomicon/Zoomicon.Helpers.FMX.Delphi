@@ -15,15 +15,12 @@
       "url": "https://github.com/Zoomicon/Zoomicon.Helpers.FMX.Delphi"
     },
     "main": "Source/Zoomicon.Helpers.FMX.dproj",
-    //"test": "Test/Zoomicon.Helpers.FMX.Test.dproj",
 
     "projects": [
-      "Source/Zoomicon.Helpers.FMX.dproj",
-      //"Test/Zoomicon.Helpers.FMX.Test.dproj"
+      "Source/Zoomicon.Helpers.FMX.dproj"
     ],
     "files": [
-      "Source/**/*.pas",
-      "Test/**/*.pas"
+      "Source/**/*.pas"
     ]
   }
 }
