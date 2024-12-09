@@ -253,6 +253,7 @@
         <DCCReference Include="Zoomicon.Helpers.FMX.ImgList\Zoomicon.Helpers.FMX.ImgList.ImageListHelpers.pas"/>
         <DCCReference Include="Zoomicon.Helpers.FMX.TreeView\Zoomicon.Helpers.FMX.TreeView.TreeViewHelpers.pas"/>
         <DCCReference Include="Zoomicon.Helpers.FMX.Forms\Zoomicon.Helpers.FMX.Forms.FormHelper.pas"/>
+        <DCCReference Include="Zoomicon.Helpers.FMX.Memo\Zoomicon.Helpers.FMX.Memo.MemoHelpers.pas"/>
         <None Include="..\boss.json"/>
         <None Include="..\LICENSE.txt"/>
         <None Include="..\README.md"/>
@@ -289,52 +290,6 @@
                 <Platform value="Win64x">False</Platform>
             </Platforms>
             <Deployment Version="5">
-                <DeployFile LocalName="$(BDS)\Redist\Win32\fmx290.bpl" Configuration="Debug" Class="DependencyPackage">
-                    <Platform Name="Win32">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\fmx290.de" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>fmx290.de</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\fmx290.fr" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>fmx290.fr</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\fmx290.ja" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>fmx290.ja</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\rtl290.bpl" Configuration="Debug" Class="DependencyPackage">
-                    <Platform Name="Win32">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\rtl290.de" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>rtl290.de</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\rtl290.fr" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>rtl290.fr</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\rtl290.ja" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>rtl290.ja</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
                 <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
                     <Platform Name="iOSSimulator">
                         <Overwrite>true</Overwrite>
