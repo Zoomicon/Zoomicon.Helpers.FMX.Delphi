@@ -12,12 +12,12 @@ interface
     public
       class var DisableMemoFontSizeToFit : boolean; //=false (class variables are auto-initialized, not need to use class constructor for that)
 
-      procedure SetMemoFontSizeToFit(var LastFontFitSize: TSizeF);
+      procedure SetFontSizeToFit(var LastFontFitSize: TSizeF);
     end;
 
 implementation
 
-  procedure TMemoHelper.SetMemoFontSizeToFit(var LastFontFitSize: TSizeF); //TODO: add logging
+  procedure TMemoHelper.SetFontSizeToFit(var LastFontFitSize: TSizeF); //TODO: add logging
   //const
     //Offset = 0; //The diference between ContentBounds and ContentLayout //TODO: info coming from https://stackoverflow.com/a/21993017/903783 - need to verify
   begin
