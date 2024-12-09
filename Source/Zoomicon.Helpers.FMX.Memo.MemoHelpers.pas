@@ -10,7 +10,7 @@ interface
 
     TMemoHelper = class helper for TMemo
     public
-      class var DisableMemoFontSizeToFit : boolean; //=false (class variables are auto-initialized, not need to use class constructor for that)
+      class var DisableFontSizeToFit : boolean; //=false (class variables are auto-initialized, not need to use class constructor for that)
 
       procedure SetFontSizeToFit(var LastFontFitSize: TSizeF);
     end;
@@ -21,7 +21,7 @@ implementation
   //const
     //Offset = 0; //The diference between ContentBounds and ContentLayout //TODO: info coming from https://stackoverflow.com/a/21993017/903783 - need to verify
   begin
-    if DisableMemoFontSizeToFit then exit;
+    if DisableFontSizeToFit then exit;
 
     // Temporarily enable AutoCalculateContentSize if it's disabled
     var LOriginalAutoCalc := AutoCalculateContentSize;
