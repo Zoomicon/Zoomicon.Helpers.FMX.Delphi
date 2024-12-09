@@ -22,19 +22,21 @@ implementation
   begin
     if DisableFontSizeToFit then exit;
 
+    {$IF DEFINED(ANDROID) OR DEFINED(IOS)}
     // Temporarily enable AutoCalculateContentSize if it's disabled
     var LOriginalAutoCalc := AutoCalculateContentSize;
     if not LOriginalAutoCalc then
-      AutoCalculateContentSize := True;
+      AutoCalculateContentSize := True; //TODO: !!! Setting to true may be causing text to disappear !!!
+    {$ENDIF}
 
     try
       {$IF DEFINED(ANDROID) OR DEFINED(IOS)}
       UpdateContentSize; //Recalculates content bounds of a scroll box. Does not calculate content bounds if AutoCalculateContentSize is False or if the state of the scroll box is csLoading or csDestroying
       {$ENDIF}
 
-      var Offset := 10 {* AbsoluteScale.Y}; //TODO: not very good
-      var LHeight := Height;
-      if (LHeight = 0) {or (Size.Size = LastFontFitSize)} then
+      const Offset = 10 {* AbsoluteScale.Y}; //TODO: not very good
+      const LHeight = Height;
+      if (LHeight = 0) {or (Size.Size = LastFontFitSize)} then //TODO: should we use this again?
         exit; //don't calculate font autofit based on probably not yet available height information, nor when AMemo.Height didn't change from last calculation
 
       //Font.Size := 12; //Don't set initial font size, use the current one (which may be from a previous calculation - this speeds up when resizing and also fixes glitches when loading saved state if recalculation isn't done for some reason after loading)
@@ -84,8 +86,10 @@ implementation
         LContentBoundsHeight := LContentBoundsNewHeight;
       end;
     finally
+      {$IF DEFINED(ANDROID) OR DEFINED(IOS)}
       // Restore the original AutoCalculateContentSize value Self.AutoCalculateContentSize := OriginalAutoCalc;
       AutoCalculateContentSize := LOriginalAutoCalc;
+      {$ENDIF}
     end;
 
   end;
