@@ -2,9 +2,8 @@ unit Zoomicon.Helpers.FMX.Memo.MemoHelpers;
 
 interface
   uses
-    FMX.Memo,
-    FMX.Types,
-    System.Types;
+    System.Types, //for TSizeF
+    FMX.Memo; //for TMemo
 
   type
 
