@@ -32,15 +32,13 @@ requires
   fmx;
 
 contains
-  Zoomicon.Helpers.FMX.Forms.ApplicationHelper in 'Zoomicon.Helpers.FMX.Forms\Zoomicon.Helpers.FMX.Forms.ApplicationHelper.pas',
-  Zoomicon.Helpers.FMX.Layouts.ScrollBoxHelpers in 'Zoomicon.Helpers.FMX.Layouts\Zoomicon.Helpers.FMX.Layouts.ScrollBoxHelpers.pas',
-  Zoomicon.Helpers.FMX.Layouts.ScaledLayoutHelpers in 'Zoomicon.Helpers.FMX.Layouts\Zoomicon.Helpers.FMX.Layouts.ScaledLayoutHelpers.pas',
-  Zoomicon.Helpers.FMX.Controls.ControlHelper in 'Zoomicon.Helpers.FMX.Controls\Zoomicon.Helpers.FMX.Controls.ControlHelper.pas',
-  Zoomicon.Helpers.FMX.ImgList.ImageListHelpers in 'Zoomicon.Helpers.FMX.ImgList\Zoomicon.Helpers.FMX.ImgList.ImageListHelpers.pas',
-  Zoomicon.Helpers.FMX.TreeView.TreeViewHelpers in 'Zoomicon.Helpers.FMX.TreeView\Zoomicon.Helpers.FMX.TreeView.TreeViewHelpers.pas',
-  Zoomicon.Helpers.FMX.Forms.FormHelper in 'Zoomicon.Helpers.FMX.Forms\Zoomicon.Helpers.FMX.Forms.FormHelper.pas',
-  Zoomicon.Helpers.FMX.Memo.MemoHelpers in 'Zoomicon.Helpers.FMX.Memo\Zoomicon.Helpers.FMX.Memo.MemoHelpers.pas';
-
-{$DESCRIPTION 'Zoomicon Helpers for FMX'}
+  Zoomicon.Helpers.FMX.Controls.ControlHelper in 'Zoomicon.Helpers.FMX.Controls.ControlHelper.pas',
+  Zoomicon.Helpers.FMX.Forms.ApplicationHelper in 'Zoomicon.Helpers.FMX.Forms.ApplicationHelper.pas',
+  Zoomicon.Helpers.FMX.Forms.FormHelper in 'Zoomicon.Helpers.FMX.Forms.FormHelper.pas',
+  Zoomicon.Helpers.FMX.ImgList.ImageListHelpers in 'Zoomicon.Helpers.FMX.ImgList.ImageListHelpers.pas',
+  Zoomicon.Helpers.FMX.Layouts.ScaledLayoutHelpers in 'Zoomicon.Helpers.FMX.Layouts.ScaledLayoutHelpers.pas',
+  Zoomicon.Helpers.FMX.Layouts.ScrollBoxHelpers in 'Zoomicon.Helpers.FMX.Layouts.ScrollBoxHelpers.pas',
+  Zoomicon.Helpers.FMX.Memo.MemoHelpers in 'Zoomicon.Helpers.FMX.Memo.MemoHelpers.pas',
+  Zoomicon.Helpers.FMX.TreeView.TreeViewHelpers in 'Zoomicon.Helpers.FMX.TreeView.TreeViewHelpers.pas';
 
 end.
