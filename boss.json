@@ -1,26 +1,26 @@
 {
-  "package": {
-    "name": "Zoomicon.Helpers.FMX",
-    "version": "1.5",
+  "name": "Zoomicon.Helpers.FMX",
+  "version": "3.0",
 
-    "description": "Helpers for Delphi FMX (FireMonkey)",
+  "description": "Helpers for Delphi FMX (FireMonkey)",
 
-    "author": "George Birbilis - Zoomicon.com",
-    "license": "MIT",
+  "author": "George Birbilis - Zoomicon.com",
+  "license": "MIT",
     
-    "dependencies": {}, 
+  "dependencies": {}, 
 
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/Zoomicon/Zoomicon.Helpers.FMX.Delphi"
-    },
-    "main": "Source/Zoomicon.Helpers.FMX.dproj",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zoomicon/Zoomicon.Helpers.FMX.Delphi"
+  },
 
-    "projects": [
-      "Source/Zoomicon.Helpers.FMX.dproj"
-    ],
-    "files": [
-      "Source/**/*.pas"
-    ]
-  }
+  "main": "Source/Zoomicon.Helpers.FMX.dproj",
+
+  "projects": [
+    "Source/Zoomicon.Helpers.FMX.dproj"
+  ],
+
+  "files": [
+    "Source/**/*.pas"
+  ]
 }
