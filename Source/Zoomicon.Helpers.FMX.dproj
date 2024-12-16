@@ -254,6 +254,7 @@
         <DCCReference Include="Zoomicon.Helpers.FMX.Layouts.ScrollBoxHelpers.pas"/>
         <DCCReference Include="Zoomicon.Helpers.FMX.Memo.MemoHelpers.pas"/>
         <DCCReference Include="Zoomicon.Helpers.FMX.TreeView.TreeViewHelpers.pas"/>
+        <DCCReference Include="Zoomicon.Helpers.FMX.ActnList.pas"/>
         <None Include="..\boss.json"/>
         <None Include="..\LICENSE.txt"/>
         <None Include="..\README.md"/>
