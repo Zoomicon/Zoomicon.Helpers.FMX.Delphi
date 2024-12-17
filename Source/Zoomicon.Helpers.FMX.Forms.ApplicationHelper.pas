@@ -226,6 +226,8 @@ implementation
   end;
   {$ENDIF}
 
+  //Windows, Android and MacOS-X implementation originates from https://github.com/DeveloppeurPascal/librairies/blob/master/u_urlOpen.pas
+  //that code had been adapted (before eventually getting moved into this repository) into REACOM.App.URLs unit at MIT licensed READ-COM App (history of that file is at https://github.com/Zoomicon/READCOM_App/commits/d58863b6ddcb399a132e55bff6d3f44e2a9f4e40/App/READCOM.App.URLs.pas) back in 2022, when the DeveloppeurPascal's libraries repository was still using MIT license (it changed to AGPL at 2023 - https://github.com/DeveloppeurPascal/librairies/commits/master/LICENSE)
   function TApplicationHelper.OpenURL(URL: string): Boolean;
   begin
     try
