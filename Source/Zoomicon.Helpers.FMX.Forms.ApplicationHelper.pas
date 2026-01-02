@@ -38,8 +38,6 @@ interface
   function SharedApplicationEx: UIApplicationEx;
   {$ENDIF}
 
-  function IsURI(const Value: String): Boolean;
-
 implementation
   {$region 'Used units'}
   uses
@@ -258,11 +256,6 @@ implementation
   {$endregion}
 
   {$ENDREGION}
-
-  function IsURI(const Value: String): Boolean;
-  begin
-    Result := Value.StartsWith('http://', true) or Value.StartsWith('https://', true); //TODO: a bit naive implementation
-  end;
 
 end.
 

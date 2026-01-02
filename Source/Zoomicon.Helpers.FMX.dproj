@@ -291,6 +291,8 @@
                     <Source Name="MainSource">Zoomicon.Helpers.FMX.dpk</Source>
                 </Source>
                 <Excluded_Packages/>
+                <WelcomePageFile Path="..\README.md"/>
+                <WelcomePageFolder/>
             </Delphi.Personality>
             <Platforms>
                 <Platform value="Android">True</Platform>
