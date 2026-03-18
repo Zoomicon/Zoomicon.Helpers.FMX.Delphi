@@ -45,25 +45,25 @@ implementation
     System.Variants,
     System.UITypes, //for TMsgDlgType
     FMX.DialogService, //for TDialogService
-    FMX.Dialogs, //for mbYesNo
+    FMX.Dialogs //for mbYesNo
     {$IF DEFINED(MSWINDOWS)}
-    Winapi.ShellAPI,
-    Winapi.Windows;
+    , Winapi.ShellAPI,
+    Winapi.Windows
     {$ELSEIF DEFINED(ANDROID)}
-    //FMX.Helpers.Android,
+    , //FMX.Helpers.Android,
     Androidapi.Jni.App, //to avoid DCC Hint "H2443 Inline function 'TAndroidHelper.GetJActivity' has not been expanded"
     Androidapi.Jni.NET, //to avoid DCC Hint "H2443 Inline function 'StrToJURI' has not been expanded"
     Androidapi.Helpers, //for TAndroidHelper, JStringToString
     Androidapi.JNI.GraphicsContentViewText, //to avoid "H2443 Inline function 'SharedActivityContext' has not been expanded"
-    Androidapi.JNI.JavaTypes; //to avoid "H2443 Inline function 'JStringToString' has not been expanded"
+    Androidapi.JNI.JavaTypes //to avoid "H2443 Inline function 'JStringToString' has not been expanded"
     {$ELSEIF DEFINED(IOS)}
-    //FMX.Helpers.iOS,
+    , //FMX.Helpers.iOS,
     Macapi.CoreFoundation,
-    Macapi.Helpers;
-    {$ELSEIF DEFINED(MACOS)} //need to have this after DEFINED(IOS) check
-    Posix.Stdlib,
-    Macapi.CoreFoundation;
-    {$ENDIF}
+    Macapi.Helpers
+    {$ELSEIF DEFINED(MACOS)} //need to have this after DEFINED(IOS) check (TODO: check for OSX?)
+    , Posix.Stdlib,
+    Macapi.CoreFoundation
+    {$ENDIF};
   {$endregion}
 
   {$REGION 'TApplicationHelper' -----------------------------------------------}
@@ -154,6 +154,7 @@ implementation
   end;
 
   {$ELSEIF DEFINED(IOS)} //based on https://codeverge.com/embarcadero.delphi.firemonkey/getting-application-version-and/1050163
+  //TODO: maybe nest this inside the MACOS check, since iOS target also defines MACOS - also check if GetAppVersionStr4 would compile on OS-X, in that case no extra conditional is needed, keep both functions in MACOS block for both OS-X and iOS
 
   function GetAppVersionStr4: string;
   var
@@ -183,6 +184,15 @@ implementation
   {$ELSEIF DEFINED(LINUX)}
 
   //see https://stackoverflow.com/questions/44600597/delphi-linux64-how-to-retrieve-the-version-information-set-by-project-options-v and https://wiki.freepascal.org/Show_Application_Title,_Version,_and_Company#Linux
+
+  function GetAppVersionStr3: string;
+  begin
+    {$IFDEF APP_VERSION}
+    result := APP_VERSION;
+    {$ELSE}
+    result := '0.0.0'; //custom APP_VERSION conditional define not found (passed to compiler via -D parameter or defined at project settings)
+    {$ENDIF}
+  end;
 
   {$ENDIF}
 
